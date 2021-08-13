@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This will contain some basic webpack configuration to use in other projects. It will bundle source code.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve",
+    "build": "webpack --node-env production",
+    "build-dev": "webpack"
   },
   "repository": {
     "type": "git",
