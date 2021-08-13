@@ -38,3 +38,5 @@ npm run build-dev
 * `src/assets/image` - put images here. Don't forget to use correct path
 * `src/assets/fonts` - put fonts here. Don't forget to use correct path
 
+![Webpack](https://user-images.githubusercontent.com/54698049/129415445-2a5a7fd9-601f-4864-b43f-ab6cf684fd13.jpg)
+
