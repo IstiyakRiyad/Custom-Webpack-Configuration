@@ -9,6 +9,7 @@ let tool = "source-map";
 let outputName = "[name].js";
 let imageName = "[name][ext][query]";
 let cssName = "[name].css";
+let fontName = "[name][ext][query]";
 
 if(process.env.NODE_ENV === "production") {
     mode = "production";
@@ -16,6 +17,7 @@ if(process.env.NODE_ENV === "production") {
     outputName = "[name].[contenthash].js";
     imageName = "[name].[hash][ext][query]";
     cssName = "[name].[contenthash].css";
+    fontName = "[name].[hash][ext][query]";
 }
 
 
@@ -45,6 +47,14 @@ module.exports = {
                 generator: {
                     filename: "assets/images/" + imageName
                 }
+            },
+            {
+              test: /\.(woff|woff2|eot|ttf|otf)$/i,
+              type: 'asset/resource',
+
+              generator: {
+                  filename: "assets/fonts/" + fontName
+              }
             }
         ]
     },
