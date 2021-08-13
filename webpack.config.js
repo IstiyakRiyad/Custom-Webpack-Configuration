@@ -1,10 +1,12 @@
 const path = require('path');
 
 let mode = "development";
+let tool = "source-map";
 
 
 if(process.env.NODE_ENV === "production") {
     mode = "production";
+    tool = false;
 }
 
 
@@ -19,5 +21,12 @@ module.exports = {
         filename: "main.js",
         path: path.resolve(__dirname, "build"),
         clean: true
+    },
+
+    devtool: tool,
+
+    devServer: {
+        contentBase: "./build",
+        hot: true
     }
 };
