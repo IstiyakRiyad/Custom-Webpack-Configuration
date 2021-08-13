@@ -1,0 +1,22 @@
+{
+  "name": "custom-webpack-configuration",
+  "version": "1.0.0",
+  "description": "This will contain some basic webpack configuration to use in other projects. It will bundle source code.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IstiyakRiyad/Custom-Webpack-Configuration.git"
+  },
+  "keywords": [],
+  "author": {
+    "name" : "Md. Istiyak Hossain",
+    "email" : "istiyak.riyad@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IstiyakRiyad/Custom-Webpack-Configuration/issues"
+  },
+  "homepage": "https://github.com/IstiyakRiyad/Custom-Webpack-Configuration#readme"
+}
