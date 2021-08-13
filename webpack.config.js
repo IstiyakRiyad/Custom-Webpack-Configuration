@@ -6,11 +6,16 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 let mode = "development";
 let tool = "source-map";
-
+let outputName = "[name].js";
+let imageName = "[name][ext][query]";
+let cssName = "[name].css";
 
 if(process.env.NODE_ENV === "production") {
     mode = "production";
     tool = false;
+    outputName = "[name].[contenthash].js";
+    imageName = "[name].[hash][ext][query]";
+    cssName = "[name].[contenthash].css";
 }
 
 
@@ -22,7 +27,7 @@ module.exports = {
     },
 
     output: {
-        filename: "main.js",
+        filename: "scripts/" + outputName,
         path: path.resolve(__dirname, "build"),
         clean: true
     },
@@ -38,7 +43,7 @@ module.exports = {
                 type: "asset/resource",
 
                 generator: {
-                    filename: "assets/image/[name][ext][query]"
+                    filename: "assets/images/" + imageName
                 }
             }
         ]
@@ -46,7 +51,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({template: "./src/template.html"}),
-        new MiniCssExtractPlugin({filename: "styles/main.css"})
+        new MiniCssExtractPlugin({filename: "styles/" + cssName})
     ],
 
     optimization: {
