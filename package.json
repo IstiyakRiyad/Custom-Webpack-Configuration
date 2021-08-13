@@ -11,12 +11,17 @@
   },
   "keywords": [],
   "author": {
-    "name" : "Md. Istiyak Hossain",
-    "email" : "istiyak.riyad@gmail.com"
+    "name": "Md. Istiyak Hossain",
+    "email": "istiyak.riyad@gmail.com"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IstiyakRiyad/Custom-Webpack-Configuration/issues"
   },
-  "homepage": "https://github.com/IstiyakRiyad/Custom-Webpack-Configuration#readme"
+  "homepage": "https://github.com/IstiyakRiyad/Custom-Webpack-Configuration#readme",
+  "devDependencies": {
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
 }
