@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { Template } = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
 
 let mode = "development";
 let tool = "source-map";
@@ -25,9 +27,26 @@ module.exports = {
         clean: true
     },
 
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
+            }
+        ]
+    },
+
     plugins: [
-        new HtmlWebpackPlugin({template: "./src/template.html"})
+        new HtmlWebpackPlugin({template: "./src/template.html"}),
+        new MiniCssExtractPlugin({filename: "styles/main.css"})
     ],
+
+    optimization: {
+        minimizer: [
+            `...`,
+            new CssMinimizerPlugin()
+        ]
+    },
 
     devtool: tool,
 
