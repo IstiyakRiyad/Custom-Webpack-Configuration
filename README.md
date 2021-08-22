@@ -40,3 +40,6 @@ npm run build-dev
 
 ![Webpack](https://user-images.githubusercontent.com/54698049/129415445-2a5a7fd9-601f-4864-b43f-ab6cf684fd13.jpg)
 
+## Netlify Link
+<a href="https://keen-meninsky-a855bc.netlify.app/"> Webpack Template <a>
+
